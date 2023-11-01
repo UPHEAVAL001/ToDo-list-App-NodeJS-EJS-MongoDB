@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2201a02ece.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <h1 id="main-heading">TODO App</h1>
+    <hr>
+    <form id="task-collector" action="/add-task" method="POST">
+        <label for="description">DESCRIPTION</label>
+        <input class="flex" id="description" type="text" name="task" placeholder="What do you need to do?" required>
+        <hr>
+        <div id="cateAnddate">
+            <div class="flexclass">
+                <label for="category">CATEGORY</label>
+                <select name="category" id="category">
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="School">School</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <hr>
+            <div class="flexclass">
+                <label for="category">DUE DATE</label>
+                <input id="date" type="date" name="date" required>
+            </div>
+        </div>
+        <hr>
+        <div id="btn-container">
+            <button id="add-sbm" type="submit">ADD TASK</button>
+            <label id="delete-btn" for="delete-sbm">DELETE TASKS</label>
+        </div>
+        <hr>
+    </form>
+    <div class="task-container">
+        <form id="task-renderer" action="/delete-task" method="POST">
+            <% for (i of task_list) { %>
+                <div class="taskcard">
+                    <div class="task&date">
+                        <div class="checkAnddescr">
+                            <input class="task-box" type="checkbox" id="<%= i._id %>" name="<%= i._id %>"
+                                value="<%= i._id %>">
+                            <label class="task-label" for="<%= i._id %>">
+                                <%= i.task %>
+                            </label>
+                        </div>
+                        <p class="caleAdate">
+                            <% const mon=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"] %>
+                                <% var x=i.dueDate%>
+                                    <% var date=x.getDate()%>
+                                        <% var month=x.getMonth() %>
+                                            <% month=mon[month] %>
+                                                <% var year=x.getFullYear()%>
+                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                    <%= month + " " + date + " , " + year %>
+
+                        </p>
+                    </div>
+                    <div class="<%= i.category %>">
+                        <%= i.category %>
+                    </div>
+                </div>
+                <hr>
+                <% } %>
+                    <button id="delete-sbm" type="submit"></button>
+        </form>
+    </div>
+    <script type="text/javascript" src="JS/script.js"></script>
+</body>
+
+</html>

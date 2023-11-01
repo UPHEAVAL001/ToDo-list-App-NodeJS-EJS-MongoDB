@@ -1,0 +1,163 @@
+/* header */
+
+#main-heading{
+    font-family: sans-serif;
+    color:#93867f;
+    text-align: center;
+}
+
+#description{
+    display: block;
+}
+
+
+#cateAnddate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flexclass{
+    display: flex;
+    flex-direction: column;
+    width: 446px;
+}
+
+#btn-container{
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    align-items: center;
+}
+
+#add-sbm{
+    border: none;
+    background-color: #584f45;
+    color: whitesmoke;
+    font-family: sans-serif;
+    width: 115px;
+    height: 35px;
+    cursor: pointer;
+}
+
+#delete-btn{
+    border: none;
+    background-color: #9d212d;
+    color: whitesmoke;
+    font-family: sans-serif;
+    width: 115px;
+    height: 25px;
+    text-align: center;
+    padding-top: 9px;
+    cursor: pointer;
+}
+
+.checkAnddescr{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+.task-label{
+    align-self: center;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.caleAdate{
+    font-family: sans-serif;
+    color: grey;
+    font-size: smaller;
+    margin: -2px;
+    margin-left: 31px;
+}
+
+.fa-solid{
+    margin-right:5px;
+}
+
+.taskcard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Personal{
+    border: none;
+    background-color: #ab3cb8;
+    color: whitesmoke;
+    font-family: sans-serif;
+    width: 115px;
+    height: 35px;
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Work{
+    border: none;
+    background-color: #c59663;
+    color: whitesmoke;
+    font-family: sans-serif;
+    width: 115px;
+    height: 35px;
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.School{
+    border: none;
+    background-color: #2d71a4;
+    color: whitesmoke;
+    font-family: sans-serif;
+    width: 115px;
+    height: 35px;
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Other{
+    display:none;
+}
+
+#delete-sbm{
+    display:none;
+}
+
+/* common styles */
+
+hr{
+    border-width: 10px;
+}
+
+input{
+    outline: none;
+    border: none;
+    /* display: block; */
+    font-family: sans-serif;
+    height: 30px;
+    opacity: .5;
+    font-size: 16px;
+    background: transparent;
+}
+
+select{
+    outline: none;
+    border: none;
+    color: grey;
+    font-size: 16px;
+    opacity: .5;
+    height: 30px;
+}
+
+label{
+    font-family: sans-serif;
+    font-size: 14px;
+    color: grey;
+}
