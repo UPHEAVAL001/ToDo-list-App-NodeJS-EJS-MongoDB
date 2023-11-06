@@ -1,1 +1,1 @@
-Console.log("Currently static JS file is not in use")
+console.log("Currently static JS file is not in use");
